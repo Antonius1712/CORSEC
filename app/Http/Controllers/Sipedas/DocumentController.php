@@ -27,9 +27,9 @@ class DocumentController extends Controller
             0 => 'Inactive'
         ];
 
-        $this->docType = MasterDocument::pluck('document_type', 'id');
-        $this->docName = Document::groupBy('document_name')->pluck('document_name', 'id');
-        $this->docDesc = Document::groupBy('document_description')->pluck('document_description', 'id');
+        $this->docType = MasterDocument::pluck('document_type', 'id')->unique();
+        $this->docName = Document::orderby('id','desc')->get()->pluck('document_name', 'id')->unique();
+        $this->docDesc = Document::orderby('id','desc')->get()->pluck('document_description', 'id')->unique();
     }
 
     public function index()
