@@ -9,19 +9,20 @@ use App\Model\History;
 // ! 3. ADD /Providers/AppSerciveProviders.php
 
 class Site {
-    public function save_history($data, $action){
-        try {
-          $description = $data->document_name . ' ' . $data->document_filename . ' ' . $data->status . ' ' . $data->document_type();
-          $history = new History;
-          $history->document_id = $data->id;
-          $history->nik = $data->created_by;
-          $history->action = $action;
-          $history->description = $description;
-          $history->save();
-          
-          return true;
-        } catch (\Exception $e) {
-          return $e->getMessage();
-        }
+    public function save_history($data, $user, $action){
+      // dd($data, $user, $action);
+      try {
+        $description = $data->document_name . ' ' . $data->document_filename . ' ' . $data->status . ' ' . $data->master_document->document_type;
+        $history = new History;
+        $history->document_id = $data->id;
+        $history->nik = $user;
+        $history->action = $action;
+        $history->description = $description;
+        $history->save();
+        
+        return 'Sukses';
+      } catch (\Exception $e) {
+        return $e->getMessage();
+      }
     }
 }

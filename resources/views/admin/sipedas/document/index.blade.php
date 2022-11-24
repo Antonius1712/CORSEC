@@ -5,7 +5,7 @@
 @section('content')
     <div class="card">
         <div class="card-header bg-primary">
-            <h2 class="text-white">Document Type List</h2>
+            <h2 class="text-white">Document List</h2>
         </div>
         <div class="card-body">
             <a href="{{ Route('admin.sipedas.document.create') }}" class="btn btn-success pull-right mb-2">Add</a>
@@ -29,14 +29,14 @@
                     @forelse ($document as $val)
                         <tr>
                             <td> {{ $val->document_name }} </td>
-                            <td> {{ $val->document_type() }} </td>
+                            <td> {{ $val->master_document->document_type }} </td>
                             <td> {{ $val->document_description }} </td>
                             <td> {{ $val->created_by() }} </td>
                             <td> {{ $val->created_at }} </td>
                             <td> {{ $val->updated_by() }} </td>
                             <td> {{ $val->updated_at }} </td>
                             <td> {{ $val->status() }} </td>
-                            <td> {{ $val->last_history_name() }} </td>
+                            <td> {{ $val->last_history_desc() }} </td>
                             <td> {{ $val->document_number_of_download }} </td>
                             <td>
                                 <a href="{{ Route('admin.sipedas.document.edit', $val->id) }}" class="btn btn-sm btn-outline-warning">

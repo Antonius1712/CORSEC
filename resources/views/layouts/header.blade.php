@@ -20,8 +20,8 @@
                                 </span>
                                 <span class="user-status">
                                     {{ Auth()->check() ? Auth()->user()->getDept->DeptName : '' }}
-                                    /
-                                    {{ Auth()->check() ? Auth()->user()->getBranch->BranchName : '' }}
+                                    {{-- /
+                                    {{ Auth()->check() ? Auth()->user()->getBranch->BranchName : '' }} --}}
                                 </span>
                             </div>
                         </a>

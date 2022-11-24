@@ -116,6 +116,9 @@ class DocumentController extends Controller
             $document_number_of_download = $document_number_of_download+1;
         }
 
+        $user = Auth()->user()->UserId;
         Document::findOrFail($request->id)->update(['document_number_of_download' => $document_number_of_download]);
+        $Document = Document::findOrFail($request->id);
+        return \Site::save_history($Document, $user, 'Download Document');
     }
 }
