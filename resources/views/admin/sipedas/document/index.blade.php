@@ -36,7 +36,7 @@
                             <td> {{ $val->updated_by() }} </td>
                             <td> {{ $val->updated_at }} </td>
                             <td> {{ $val->status() }} </td>
-                            <td> {{ $val->last_history_desc() }} </td>
+                            <td> {{ $val->last_history_name(). ' ' . $val->last_history_desc() }} </td>
                             <td> {{ $val->document_number_of_download }} </td>
                             <td>
                                 <a href="{{ Route('admin.sipedas.document.edit', $val->id) }}" class="btn btn-sm btn-outline-warning">
