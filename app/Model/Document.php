@@ -40,13 +40,23 @@ class Document extends Model
     }
 
     public function last_history_name(){
-        $nik = History::where('document_id', $this->id)->orderby('id', 'desc')->get()[0]->nik;
-        return LGIGlobal_Users::where('UserId', $nik)->value('name');
+        $name = '';
+        $nik = History::where('document_id', $this->id)->orderby('id', 'desc');
+        if( $nik ){
+            $nik = $nik->get()[0]->nik;
+            $name = LGIGlobal_Users::where('UserId', $nik)->value('name');
+        }
+        return $name;
     }
 
     public function last_history_desc(){
-        $data = History::where('document_id', $this->id)->orderby('id', 'desc')->get()[0];
-        return $data->action.' '.$data->description;
+        $log = '';
+        $data = History::where('document_id', $this->id)->orderby('id', 'desc');
+        if( $data ){
+            $data = $data->get()[0];
+            $log = $data->action.' '.$data->description;
+        }
+        return $log;
     }
 
     public function master_document(){
