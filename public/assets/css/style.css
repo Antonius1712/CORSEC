@@ -38,10 +38,14 @@ table>tbody>tr>td {
 	text-align:center;
 }
 
-body, span, p, label, th, button, a {
+body {
+	zoom: 75%;
 	/* font-family: 'myriad pro' !important; */
 	/* font-family: 'Arial' !important; */
-	/* font-family: 'Helvatica' !important; */
+	/* font-family: 'Helvetica' !important; */
+}
+
+body, span, p, label, th, button, a {
 	font-size: 17px !important;
 }
 
@@ -50,5 +54,14 @@ h2, .brand-text {
 }
 
 table>thead>tr>th {
+	vertical-align: middle !important;
+}
+
+.card-header {
+	padding: 1.5rem !important;
+}
+
+.card-header > p {
+	font-size: 24px !important;
 	vertical-align: middle !important;
 }
