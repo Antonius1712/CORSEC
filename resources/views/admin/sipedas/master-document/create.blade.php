@@ -3,7 +3,7 @@
     
 @endsection
 @section('content')
-    <div class="card">
+    <div class="card mt-4">
         <div class="card-header bg-primary">
             <h2 class="text-white">Input Document Type</h2>
             <br/>

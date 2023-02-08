@@ -6,7 +6,7 @@
     
 @endsection
 @section('content')
-    <div class="card">
+    <div class="card mt-4">
         <div class="card-header bg-primary text-white">
             <p>Document</p>
         </div>
@@ -75,7 +75,7 @@
                 <div class="col-12 col-md-12 col-lg-12">
                     <table class="table table-striped" id="DataTable">
                         <thead>
-                            <tr class="bg-info text-white">
+                            <tr class="tr-table bg-info text-white">
                                 <th> Document Name </th>
                                 <th> Document Type </th>
                                 <th> Document Desc </th>

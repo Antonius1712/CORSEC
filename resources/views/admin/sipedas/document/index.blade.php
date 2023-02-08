@@ -3,15 +3,15 @@
     
 @endsection
 @section('content')
-    <div class="card">
+    <div class="card mt-4">
         <div class="card-header bg-primary">
             <h2 class="text-white">Document List</h2>
         </div>
         <div class="card-body">
             <a href="{{ Route('admin.sipedas.document.create') }}" class="btn btn-success pull-right mb-2">Add</a>
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
                 <thead>
-                    <tr>
+                    <tr class="bg-primary text-white">
                         <th>Document Name</th>
                         <th>Document Type</th>
                         <th>Document Desc</th>
