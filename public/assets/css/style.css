@@ -37,3 +37,9 @@ table>thead>tr>th {
 table>tbody>tr>td {
 	text-align:center;
 }
+
+body, span {
+	/* font-family: 'myriad pro' !important; */
+	/* font-family: 'Arial' !important; */
+	font-family: 'Helvatica' !important;
+}

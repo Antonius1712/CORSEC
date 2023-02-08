@@ -37,7 +37,9 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern 1-column  navbar-floating footer-static bg-full-screen-image  blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
+<body class="vertical-layout vertical-menu-modern 1-column  navbar-floating footer-static bg-full-screen-image  blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column"
+    style="background-image: url('{{ asset('background-login.jpg') }}'); width: 100%; background-size: auto; background-repeat: no-repeat;"
+>
     <!-- BEGIN: Content-->
     <div class="app-content content">
         <div class="content-overlay"></div>

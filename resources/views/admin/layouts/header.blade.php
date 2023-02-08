@@ -10,6 +10,7 @@
                             </a>
                         </li>
                     </ul>
+                    <img src="{{ asset('corsec-logo.png') }}" alt="" style="width: 100%; max-width: 80%; max-height: 100px; padding:2%;">
                 </div>
                 <ul class="nav navbar-nav float-right">
                     <li class="dropdown dropdown-user nav-item">
