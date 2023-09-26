@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 @section('title','Masuk')
 @section('content')
-<section class="row flexbox-container" style="background-image: {{ asset('hd-wallpaper-3605547.jpg') }};">
+<section class="row flexbox-container" style="background-image: {{ asset('hd-wallpaper-3605547.jpg') }};" >
     <div class="col-xl-8 col-11 d-flex justify-content-center">
         <div class="card bg-authentication rounded-0 mb-0">
             <div class="row m-0">
