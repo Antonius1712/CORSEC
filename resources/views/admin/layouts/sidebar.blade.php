@@ -2,9 +2,9 @@
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item mr-auto">
-                <a class="navbar-brand" href="{{ Route('home') }}">
+                <a class="navbar-brand" href="{{ Route('admin.home') }}">
                     <i class="feather icon-file-text"></i>
-                    <h2 class="brand-text mb-0">Corsec Admin</h2>
+                    <h2 class="brand-text mb-0" style="font-family: myriad pro !important;">Corsec Admin</h2>
                 </a>
             </li>
             <li class="nav-item nav-toggle">
