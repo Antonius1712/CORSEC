@@ -56,6 +56,8 @@ class DocumentController extends Controller
      */
     public function store(DocumentRequest $request)
     {
+
+        // dd($request->all());
         $path = '';
         $upload = false;
         $user = Auth()->user()->UserId;
@@ -76,6 +78,7 @@ class DocumentController extends Controller
 
             $upload = $this->uploadFile($file, $filename, $fullPath);
         }
+
 
         if( $upload ){
             try {
