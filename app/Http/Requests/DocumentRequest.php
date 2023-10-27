@@ -29,7 +29,7 @@ class DocumentRequest extends FormRequest
             'document_filename' => [
                 'required',
                 'mimes:png,jpg,jpeg,pdf',
-                'max:10240'
+                // 'max:40960'
             ]
         ];
     }
