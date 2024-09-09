@@ -81,9 +81,9 @@ Edit the .env file to configure your database connection, mail server, and other
 
 ## Security
 
-- Access Control: Utilize role-based access control to manage permissions.
-- Encryption: All sensitive data, including files, are encrypted using a proprietary method to ensure confidentiality.
-- Audit Logs: Detailed logs of user actions are stored for audit purposes.
+- **Access Control**: Utilize role-based access control to manage permissions.
+- **Encryption**: All sensitive data, including files, are encrypted using a proprietary method to ensure confidentiality.
+- **Audit Logs**: Detailed logs of user actions are stored for audit purposes.
 
 
 ## Deployment
