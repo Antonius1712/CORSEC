@@ -6,7 +6,7 @@
     
 @endsection
 @section('content')
-    <div class="card">
+    <div class="card mt-4">
         <div class="card-header bg-primary text-white">
             <p>Document</p>
         </div>
@@ -75,7 +75,7 @@
                 <div class="col-12 col-md-12 col-lg-12">
                     <table class="table table-striped" id="DataTable">
                         <thead>
-                            <tr class="bg-info text-white">
+                            <tr class="tr-table bg-info text-white">
                                 <th> Document Name </th>
                                 <th> Document Type </th>
                                 <th> Document Desc </th>
@@ -89,13 +89,19 @@
                             @forelse ($Document as $val)
                                 <tr>
                                     <td> {{ $val->document_name }} </td>
-                                    <td> {{ $val->document_type() }} </td>
+                                    <td> {{ $val->master_document->document_type }} </td>
                                     <td> {{ $val->document_description }} </td>
                                     <td> {{ $val->updated_at }} </td>
                                     <td> {{ $val->updated_by() }} </td>
                                     <td> {{ $val->status() }} </td>
                                     <td>
-                                        <a href="javascript:;" data-id="{{ $val->id }}" data-url="{{ asset($val->document_full_path.'/'.$val->document_filename) }}" data-filename="{{ $val->document_filename }}" id="btn_download" class="btn btn-info">Download</a>
+                                        <a href="javascript:;" 
+                                            data-id="{{ $val->id }}" 
+                                            data-url="{{ asset($val->document_full_path.'/'.$val->document_filename) }}" 
+                                            data-filename="{{ $val->document_filename }}" 
+                                            id="btn_download" class="btn btn-info">
+                                            Download
+                                        </a>
                                     </td>
                                 </tr>
                             @empty
@@ -177,8 +183,11 @@
                 },
                 success:function(response){
                     /**/
+                    console.log(response);
+                    // return false;
                 }
             }).then(function(){
+                // return false;
                 download(url, filename);
             }).then(function(){
                 $('#loading').hide();

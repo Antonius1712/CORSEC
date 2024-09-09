@@ -3,16 +3,14 @@
     
 @endsection
 @section('content')
-<section id="dashboard-analytics">
+{{-- <section id="dashboard-analytics">
     <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="card bg-analytics text-white">
                 <div class="card-content">
                     <div class="card-body text-center">
-                        <img src="../../../app-assets/images/elements/decore-left.png" class="img-left" alt="
-card-img-left">
-                        <img src="../../../app-assets/images/elements/decore-right.png" class="img-right" alt="
-card-img-right">
+                        <img src="../../../app-assets/images/elements/decore-left.png" class="img-left" alt=" card-img-left">
+                        <img src="../../../app-assets/images/elements/decore-right.png" class="img-right" alt=" card-img-right">
                         <div class="avatar avatar-xl bg-primary shadow mt-0">
                             <div class="avatar-content">
                                 <i class="feather icon-award white font-large-1"></i>
@@ -434,7 +432,8 @@ card-img-right">
             </div>
         </div>
     </div>
-</section>
+</section> --}}
+<img src="{{ asset('corsec-welcome2.png') }}" alt="" style="width: 100%;">
 @endsection
 @section('script')
     

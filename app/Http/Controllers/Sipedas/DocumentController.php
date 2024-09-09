@@ -27,9 +27,9 @@ class DocumentController extends Controller
             0 => 'Inactive'
         ];
 
-        $this->docType = MasterDocument::pluck('document_type', 'id');
-        $this->docName = Document::groupBy('document_name')->pluck('document_name', 'id');
-        $this->docDesc = Document::groupBy('document_description')->pluck('document_description', 'id');
+        $this->docType = MasterDocument::pluck('document_type', 'id')->unique();
+        $this->docName = Document::orderby('id','desc')->get()->pluck('document_name', 'id')->unique();
+        $this->docDesc = Document::orderby('id','desc')->get()->pluck('document_description', 'id')->unique();
     }
 
     public function index()
@@ -116,6 +116,9 @@ class DocumentController extends Controller
             $document_number_of_download = $document_number_of_download+1;
         }
 
+        $user = Auth()->user()->UserId;
         Document::findOrFail($request->id)->update(['document_number_of_download' => $document_number_of_download]);
+        $Document = Document::findOrFail($request->id);
+        return \Site::save_history($Document, $user, 'Download Document');
     }
 }

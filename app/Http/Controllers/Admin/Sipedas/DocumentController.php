@@ -56,8 +56,11 @@ class DocumentController extends Controller
      */
     public function store(DocumentRequest $request)
     {
+
+        // dd($request->all());
         $path = '';
         $upload = false;
+        $user = Auth()->user()->UserId;
 
         if (isset($request->document_filename) && $request->document_filename != '') {
             $file = $request->file('document_filename');
@@ -76,6 +79,7 @@ class DocumentController extends Controller
             $upload = $this->uploadFile($file, $filename, $fullPath);
         }
 
+
         if( $upload ){
             try {
                 $Document = new Document;
@@ -86,10 +90,10 @@ class DocumentController extends Controller
                 $Document->document_file_directory = $fullPath . '/' . $filename;
                 $Document->status = $request->status;
                 $Document->document_description = $request->document_description;
-                $Document->created_by = Auth()->user()->UserId;
+                $Document->created_by = $user;
                 $Document->save();
 
-                \Site::save_history($Document, 'save document');
+                \Site::save_history($Document, $user, 'Save Document');
 
             } catch(\Exception $e) {
                 return redirect()->back();
@@ -140,6 +144,7 @@ class DocumentController extends Controller
 
         $path = '';
         $upload = false;
+        $user = Auth()->user()->UserId;
 
         if (isset($request->document_filename) && $request->document_filename != '') {
             $file = $request->file('document_filename');
@@ -168,10 +173,10 @@ class DocumentController extends Controller
                 $Document->document_file_directory = $fullPath . '/' . $filename;
                 $Document->status = $request->status;
                 $Document->document_description = $request->document_description;
-                $Document->updated_by = Auth()->user()->UserId;
+                $Document->updated_by = $user;
                 $Document->save();
 
-                \Site::save_history($Document, 'update document');
+                \Site::save_history($Document, $user, 'Update Document');
 
             } catch(\Exception $e) {
                 return redirect()->back();
@@ -185,10 +190,10 @@ class DocumentController extends Controller
                 $Document->document_name = $request->document_name;
                 $Document->status = $request->status;
                 $Document->document_description = $request->document_description;
-                $Document->updated_by = Auth()->user()->UserId;
+                $Document->updated_by = $user;
                 $Document->save();
 
-                \Site::save_history($Document, 'update document');
+                \Site::save_history($Document, $user, 'Update Document');
 
             } catch(\Exception $e) {
                 return redirect()->back();

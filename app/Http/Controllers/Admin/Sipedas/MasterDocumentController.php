@@ -43,6 +43,7 @@ class MasterDocumentController extends Controller
      */
     public function store(MasterDocumentRequest $request)
     {
+        // dd($request->validated());
         MasterDocument::create($request->validated());
         return redirect()->route('admin.sipedas.master-document.index');
     }
