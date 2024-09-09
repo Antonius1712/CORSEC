@@ -40,7 +40,7 @@
 ### Steps
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/corsec.git
+   git clone https://github.com/Antonius1712/CORSEC.git
    cd corsec
    ```
 2. **Install backend dependencies**:
