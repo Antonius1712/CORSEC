@@ -40,7 +40,7 @@
 ### Steps
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/corsec.git
+   git clone https://github.com/Antonius1712/CORSEC.git
    cd corsec
    ```
 2. **Install backend dependencies**:
@@ -107,3 +107,38 @@ For any questions or support, please reach out to:
 - **LinkedIn**: [Antonius Christian](https://www.linkedin.com/in/antonius-christian/)
 
 Feel free to connect with me via email or LinkedIn for any inquiries or further information.
+
+
+## Screenshots
+
+## Screenshots
+
+Here are some screenshots of the Corsec application:
+
+### Login
+![Login](https://raw.githubusercontent.com/Antonius1712/docs-screenshots/master/CORSEC/LOGIN.png)
+*Login page for the application.*
+
+### Admin Page - Add New Document
+![Admin Page - Add New Document](https://raw.githubusercontent.com/Antonius1712/docs-screenshots/master/CORSEC/ADMIN-PAGE-ADD-NEW-DOCUMENT.png)
+*Screenshot of the admin page where new documents can be added.*
+
+### Admin Page - Add New Master Document
+![Admin Page - Add New Master Document](https://raw.githubusercontent.com/Antonius1712/docs-screenshots/master/CORSEC/ADMIN-PAGE-ADD-NEW-MASTER-DOCUMENT.png)
+*Screenshot of the admin page for adding new master documents.*
+
+### Admin Page - Document
+![Admin Page - Document](https://raw.githubusercontent.com/Antonius1712/docs-screenshots/master/CORSEC/ADMIN-PAGE-DOCUMENT.png)
+*Overview of the admin page for managing documents.*
+
+### Admin Page - Master Document
+![Admin Page - Master Document](https://raw.githubusercontent.com/Antonius1712/docs-screenshots/master/CORSEC/ADMIN-PAGE-MASTER-DOCUMENT.png)
+*Screenshot showing the admin page for master documents.*
+
+### Document List
+![Document List](https://raw.githubusercontent.com/Antonius1712/docs-screenshots/master/CORSEC/DOCUMENT-LIST.png)
+*View of the document list within the application.*
+
+### Home Page
+![Home Page](https://raw.githubusercontent.com/Antonius1712/docs-screenshots/master/CORSEC/HOME%20PAGE.png)
+*The home page of the application.*
